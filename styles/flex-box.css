@@ -1,0 +1,39 @@
+
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.flex_direction_row {
+    flex-direction: row;
+}
+
+.flex_direction_col {
+    flex-direction: column;
+}
+
+.flex_direction_col_reverse {
+    flex-direction: column-reverse;
+}
+
+.flex_1 {
+    flex: 1;
+}
+
+.flex_align_center {
+    -ms-flex-align: center;
+    align-items: center;
+    align-self: center;
+}
+
+.flex_align_end {
+    -ms-flex-align: end;
+    align-items: flex-end;
+    align-self: end;
+}
+
+.flex_align_start {
+    -ms-flex-align: start;
+    align-items: flex-start;
+    align-self: flex-start;
+}
