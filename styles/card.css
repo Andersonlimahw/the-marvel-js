@@ -1,0 +1,51 @@
+.card {
+    background: #fff;
+    border: 1px solid #333;
+    color: #333;
+    font-size: 1.5rem;
+    margin: 8px;
+    min-width: 400px;
+}
+
+
+
+.card_title {
+    font-size: 2.5rem;
+    padding: 16px 16px;
+}
+
+.card_image {
+    margin: 0;
+    padding: 0;
+}
+
+
+.card_image img {
+    width: 100%;
+    height: auto;
+    transition: all ease 0.5s;
+}
+
+.card_image img:hover {
+    transform: scale(0.95);
+}
+
+.card_content {
+    padding: 16px 16px;
+}
+
+.card_footer {
+    margin: 8px 0;
+    padding: 16px;
+}
+
+.card_footer_actions {
+    text-align: center;
+}
+
+@media (max-width: 480px) {
+    .card {
+        min-width: 90%;
+        margin: 16px 8px;
+    }
+}
