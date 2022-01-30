@@ -1,0 +1,6 @@
+.page_title {
+    color: var(--first-color-light);
+    font-size: 48px;
+    padding: 16px 32px; 
+    width: 100%;
+}

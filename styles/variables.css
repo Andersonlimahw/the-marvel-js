@@ -1,0 +1,14 @@
+
+/*===== VARIABLES CSS =====*/
+:root{
+    /*========== Colors ==========*/
+    --first-color: #e62429;
+    --first-color-light: #f1f1f1;
+    --body-color: #202020;
+    --font-weigth-bold: bold;
+    --font-weight-regular: 700;
+    --font-weight-normal: 500;
+  
+    /*========== Font and typography ==========*/
+    --normal-font-size: 1rem;
+  }

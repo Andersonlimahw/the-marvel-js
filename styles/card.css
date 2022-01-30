@@ -3,10 +3,13 @@
     border: 1px solid #333;
     color: #333;
     font-size: 1.5rem;
-    margin: 8px;
-    min-width: 400px;
+    margin: 16px 8px;
+    min-width: calc(100% / 3 - 16px);
 }
 
+.card:hover {
+    box-shadow: 4px 8px 4px var(--first-color-light);
+}
 
 .card_title {
     font-size: 2.5rem;
@@ -39,7 +42,7 @@
 }
 
 .card_footer_actions {
-    text-align: center;
+    text-align: left;
 }
 
 @media (max-width: 480px) {

@@ -1,33 +1,35 @@
 .button {
     text-transform: uppercase;
     font-weight: bold;
-    padding: 16px 8px;
+    padding: 16px 16px;
     border-radius: 0;
     transition: all 0.5s ease;
     border-radius: 0;
+    border: none;
     margin: 8px 0;
 }
 
 .button:hover {
     cursor: pointer;
 }
+
 .button_primary {
-    background-color: #fff;
-    color: #333;
+    background-color: var(--first-color);
+    color: var(--first-color-light);
 }
 
 .button_primary:hover {
-    color: #fff;
-    background-color: #333;
+    color: var(--first-color-light);
+    background-color: var(--body-color);
 }
 
 
 .button_secondary {
-    background-color: #333;
-    color: #fff;
+    background-color: var(--body-color);
+    color: var(--first-color);
 }
 
 .button_secondary:hover {
-    background-color: #fff;
-    color: #333;
+    background-color: var(--body-color);
+    color: var(--body-color);
 }

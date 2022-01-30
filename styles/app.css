@@ -1,8 +1,19 @@
+/* Components */
 @import '../styles/card.css';
 @import '../styles/button.css';
 @import '../styles/banner.css';
 @import '../styles/menu.css';
+@import '../styles/page-title.css';
+@import '../styles//scrollbar.css';
 
+/* Variables */
+@import '../styles/variables.css';
+
+
+/* Pages */
+@import '../styles/pages/characters.css';
+
+/* Global */
 * {
     margin: 0;
     padding: 0;
@@ -10,8 +21,9 @@
 }
 
 body, html {
-    background-color: #202020;
+    background-color: var(--body-color);
     color: #f1f1f1;
+    font-weight: var(--font-weight-normal);
     padding: 0;
     margin: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
