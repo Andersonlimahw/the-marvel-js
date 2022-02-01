@@ -3,8 +3,8 @@
     border: 1px solid #333;
     color: #333;
     font-size: 1.5rem;
-    margin: 16px 8px;
-    min-width: calc(100% / 3 - 16px);
+    margin: 32px 32px;
+    min-width: calc(100% / 3 - 32px);
 }
 
 .card:hover {
@@ -43,6 +43,11 @@
 
 .card_footer_actions {
     text-align: left;
+    display: flex;
+}
+.card_footer_actions .button {
+    flex: 1;
+    align-items: stretch;
 }
 
 @media (max-width: 480px) {

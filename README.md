@@ -1,4 +1,4 @@
-# The MArvel Js
+# The Mavel : Js App
 
 ## Description
 Project with vanilla based on "The marvel api"
@@ -26,7 +26,7 @@ Project with vanilla based on "The marvel api"
 
  If all is ready you can open the page acessing:
 
- [link] http://localhost:8080/
+ http://localhost:8080/
 
  ## Color's pallet
  Red => #e62429
