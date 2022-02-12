@@ -1,11 +1,12 @@
 import renderInElement from '../utils/renderInElement.js';
 import { CHARACTERS_API_URL } from '../utils/api.js';
-import { 
-  httpRequest, 
+import { httpRequest } from '../utils/httpRequest.js';
+import {
   logInfoStyles, 
-  logErrorStyles, 
-  logWarningStyles 
-} from '../utils/httpRequest.js';
+  logSuccessStyles,
+  logErrorStyles,
+} from '../utils/logStyles.js';
+
 
 // Variabels:
 const componentId = 'characters';
@@ -56,28 +57,26 @@ function renderLoading() {
 function renderError() {
   renderInElement(componentId, error());
 }
-// Error:
 
 // Http request:
-
 const requestCharacters = async () => {
   try {
     renderLoading();
     const url = CHARACTERS_API_URL
-      .replace(':limit', '10')
+      .replace(':limit', '100')
       .replace(':offset', '1');
 
     return await httpRequest(url, {
       method: 'GET'
     }).then((response) => {
-      console.log('%c[Success] to request characters api', logInfoStyles, response.data.results.length);
+      console.log('%c[Success][requestCharacters] to request characters api', logInfoStyles, response.data.results.length);
       return response.data.results;
     });
   } catch(error) {
-    console.error('$c[Error] to request characters api:', logErrorStyles, error);
+    console.error('$c[Error][requestCharacters] to request characters api:', logErrorStyles, error);
     throw new Error(error);
   } finally {
-    console.log('%c[Finally] to request characters api', logWarningStyles, CHARACTERS_API_URL);
+    console.log('%c[Finally][requestCharacters] to request characters api', logInfoStyles, CHARACTERS_API_URL);
     renderError();
   }
 }
@@ -98,11 +97,11 @@ const renderCharacter = (character) => (
 
 const render = async () => {
   try {
-    console.log('%c[Success] starting render of characters', logInfoStyles);
+    console.log('%c[Info][render] starting render of characters', logInfoStyles);
     let characters = [];
     await requestCharacters()
       .then((response) => {
-        console.log('%c[Success] response', logInfoStyles, response);
+        console.log('%c[Success] response', logSuccessStyles, response);
         characters =  response;
         return response;
       });    
@@ -110,17 +109,16 @@ const render = async () => {
       return renderCharacter(character);
     })
     renderInElement(componentId, _result);
-    console.log('%c[Success] to renders characters', logInfoStyles);
+    console.log('%c[Success][render]  to render characters', logSuccessStyles);
   } catch(error) {
-    console.error('$c[Error] to render characters api:', logErrorStyles, error);
+    console.error('$c[Error][render]  to render characters:', logErrorStyles, error);
     renderError();
   }
-  
 }
 
 // Load:
 window.onload = (() => {
-  console.log('[characters]: window.onload()');
+  console.log('[Info][characters]: window.onload()', logInfoStyles);
   setTimeout(async () => {
     await render();
   }, loadingTime);
