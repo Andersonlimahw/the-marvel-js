@@ -10,6 +10,28 @@
  <link rel="stylesheet" href="./styles/app.css">
 <head>
     <body>
+        <div class="menu">
+            <a class="menu_item" href="./index.html">
+                <div class="menu_item_icon" tile="home">
+                    <span class="material-icons">home</span>
+                </div>
+            </a>
+            <a class="menu_item" href="./characters.html">
+                <div class="menu_item_icon" title="Personagens">
+                    <span class="material-icons">person</span>
+                </div>
+            </a>
+            <a class="menu_item" href="./authors.html">
+                <div class="menu_item_icon" title="Criadores">
+                    <span class="material-icons">face</span>
+                </div>
+            </a>
+            <a class="menu_item menu_item_icon--active" href="./comics.html">
+                <div class="menu_item_icon" title="Quadrinhos">
+                    <span class="material-icons">auto_stories</span>
+                </div>
+            </a>
+        </div>
         <main id="home">
             <section id="home_banner" class="banner">
                     <div class="banner_logo">
@@ -25,30 +47,6 @@
                         Iniciativa vingadores
                     </div>
             </section>
-
-            <div class="menu">
-                <a class="menu_item" href="./index.html">
-                    <div class="menu_item_icon" tile="home">
-                        <span class="material-icons">home</span>
-                    </div>
-                </a>
-                <a class="menu_item" href="./characters.html">
-                    <div class="menu_item_icon" title="Personagens">
-                        <span class="material-icons">person</span>
-                    </div>
-                </a>
-                <a class="menu_item" href="./authors.html">
-                    <div class="menu_item_icon" title="Criadores">
-                        <span class="material-icons">face</span>
-                    </div>
-                </a>
-                <a class="menu_item menu_item_icon--active" href="./comics.html">
-                    <div class="menu_item_icon" title="Quadrinhos">
-                        <span class="material-icons">auto_stories</span>
-                    </div>
-                </a>
-            </div>
-
         </main>
         <script src="./scripts/app.js" async> </script>
         <script type="module" src="./scripts/utils/renderInElement.js" async> </script>

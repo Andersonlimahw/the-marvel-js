@@ -10,6 +10,28 @@
  <link rel="stylesheet" href="./styles/app.css">
 <head>
     <body>
+        <div class="menu">
+            <a class="menu_item" href="./index.html">
+                <div class="menu_item_icon" tile="home">
+                    <span class="material-icons">home</span>
+                </div>
+            </a>
+            <a class="menu_item menu_item_icon--active" href="./characters.html">
+                <div class="menu_item_icon" title="Personagens">
+                    <span class="material-icons">person</span>
+                </div>
+            </a>
+            <a class="menu_item" href="./authors.html">
+                <div class="menu_item_icon" title="Criadores">
+                    <span class="material-icons">face</span>
+                </div>
+            </a>
+            <a class="menu_item" href="./comics.html">
+                <div class="menu_item_icon" title="Quadrinhos">
+                    <span class="material-icons">auto_stories</span>
+                </div>
+            </a>
+        </div>
         <main id="home">
             <section id="home_banner" class="banner">
                     <div class="banner_logo">
@@ -25,146 +47,11 @@
                         Iniciativa vingadores
                     </div>
             </section>
-            <section id="characters" class="characters">
-                <div class="card flex_1 flex_direction_row">
-                    <div class="card_image">
-                        <img 
-                            src="https://avatarfiles.alphacoders.com/172/thumb-1920-172516.jpg" 
-                            alt="Iron Man"
-                        >
-                    </div>
-                    <div class="card_title">
-                        Iron Man
-                    </div>
-                    <div class="card_content">
-                        Lorem ipsum dolor ismit trivia.
-                        Ismet cadar lore, dolor, dolor tratum.
-                    </div>
-                    <div class="card_footer">
-                        <div class="card_footer_actions">
-                            <button class="button button_primary">
-                                <span class="material-icons">auto_stories</span>
-                            </button>
-                            <button class="button button_primary">
-                                <span class="material-icons">face</span>
-                            </button>
-                            <button class="button button_primary">
-                                <span class="material-icons">link</span>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-                <div class="card flex_1 flex_direction_row">
-                    <div class="card_image">
-                        <img 
-                            src="https://avatarfiles.alphacoders.com/172/thumb-1920-172516.jpg" 
-                            alt="Iron Man"
-                        >
-                    </div>
-                    <div class="card_title">
-                        Iron Man
-                    </div>
-                    <div class="card_content">
-                        Lorem ipsum dolor ismit trivia.
-                        Ismet cadar lore, dolor, dolor tratum.
-                    </div>
-                    <div class="card_footer">
-                        <div class="card_footer_actions">
-                            <button class="button button_primary">
-                                <span class="material-icons">auto_stories</span>
-                            </button>
-                            <button class="button button_primary">
-                                <span class="material-icons">face</span>
-                            </button>
-                            <button class="button button_primary">
-                                <span class="material-icons">link</span>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-                <div class="card flex_1 flex_direction_row">
-                    <div class="card_image">
-                        <img 
-                            src="https://avatarfiles.alphacoders.com/172/thumb-1920-172516.jpg" 
-                            alt="Iron Man"
-                        >
-                    </div>
-                    <div class="card_title">
-                        Iron Man
-                    </div>
-                    <div class="card_content">
-                        Lorem ipsum dolor ismit trivia.
-                        Ismet cadar lore, dolor, dolor tratum.
-                    </div>
-                    <div class="card_footer">
-                        <div class="card_footer_actions">
-                            <button class="button button_primary">
-                                <span class="material-icons">auto_stories</span>
-                            </button>
-                            <button class="button button_primary">
-                                <span class="material-icons">face</span>
-                            </button>
-                            <button class="button button_primary">
-                                <span class="material-icons">link</span>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-                <div class="card flex_1 flex_direction_row">
-                    <div class="card_image">
-                        <img 
-                            src="https://avatarfiles.alphacoders.com/172/thumb-1920-172516.jpg" 
-                            alt="Iron Man"
-                        >
-                    </div>
-                    <div class="card_title">
-                        Iron Man
-                    </div>
-                    <div class="card_content">
-                        Lorem ipsum dolor ismit trivia.
-                        Ismet cadar lore, dolor, dolor tratum.
-                    </div>
-                    <div class="card_footer">
-                        <div class="card_footer_actions">
-                            <button class="button button_primary">
-                                <span class="material-icons">auto_stories</span>
-                            </button>
-                            <button class="button button_primary">
-                                <span class="material-icons">face</span>
-                            </button>
-                            <button class="button button_primary">
-                                <span class="material-icons">link</span>
-                            </button>
-                        </div>
-                    </div>
-                </div>
+            <section id="characters" class="characters">                
             </section>
-
-            <div class="menu">
-                <a class="menu_item" href="./index.html">
-                    <div class="menu_item_icon" tile="home">
-                        <span class="material-icons">home</span>
-                    </div>
-                </a>
-                <a class="menu_item menu_item_icon--active" href="./characters.html">
-                    <div class="menu_item_icon" title="Personagens">
-                        <span class="material-icons">person</span>
-                    </div>
-                </a>
-                <a class="menu_item" href="./authors.html">
-                    <div class="menu_item_icon" title="Criadores">
-                        <span class="material-icons">face</span>
-                    </div>
-                </a>
-                <a class="menu_item" href="./comics.html">
-                    <div class="menu_item_icon" title="Quadrinhos">
-                        <span class="material-icons">auto_stories</span>
-                    </div>
-                </a>
-            </div>
-
         </main>
         <script src="./scripts/app.js" async> </script>
-        <script type="module" src="./scripts/utils/renderInElement.js" async> </script>
+        <script type="module" src="./scripts/pages/characters.js" async> </script>
+        <!-- <script type="module" src="./scripts/utils/renderInElement.js" async> </script> -->
     </body>
 </html>

@@ -3,6 +3,12 @@
     display: flex;
     flex-wrap: nowrap;
     overflow-x: auto;
+    margin-bottom: 32px;
+}
+
+.characters .card .card_image img {
+    height: 350px;
+    min-width: 100%;
 }
 
 .characters .card .card_footer .card_footer_actions .button  {

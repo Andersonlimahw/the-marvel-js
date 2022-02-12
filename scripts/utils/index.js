@@ -1,5 +1,3 @@
-import renderInElement from './renderInElement.js';
-
-export {
-    renderInElement
-}
+export * from './renderInElement';
+export * from './api';
+export * from './httpRequest';

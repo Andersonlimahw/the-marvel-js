@@ -39,6 +39,7 @@
 .card_footer {
     margin: 8px 0;
     padding: 16px;
+    border-top: 2px solid #eee;
 }
 
 .card_footer_actions {
