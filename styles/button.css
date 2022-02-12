@@ -33,3 +33,8 @@
     background-color: var(--body-color);
     color: var(--body-color);
 }
+
+.button_circle {
+    border-radius: 50%;
+    padding: 16px;
+}

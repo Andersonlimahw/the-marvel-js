@@ -9,6 +9,7 @@ import {
 
 
 // Variabels:
+const defaultLimit = '100';
 const componentId = 'characters';
 const loadingTime = 250;
 
@@ -22,7 +23,7 @@ const loading = () => (
         Wait amazin people is loading for you : )
     </div>
     <div class="card_footer">
-        <div class="card_actions">
+        <div class="card_footer_actions">
             <button class="button button_primary">
                 ...
             </button>
@@ -40,7 +41,7 @@ const error = () => (
         Sorry, a error happens.
     </div>
     <div class="card_footer">
-        <div class="card_actions">
+        <div class="card_footer_actions">
             <button class="button button_primary">
                 ...
             </button>
@@ -63,13 +64,13 @@ const requestCharacters = async () => {
   try {
     renderLoading();
     const url = CHARACTERS_API_URL
-      .replace(':limit', '100')
+      .replace(':limit', defaultLimit)
       .replace(':offset', '1');
 
     return await httpRequest(url, {
       method: 'GET'
     }).then((response) => {
-      console.log('%c[Success][requestCharacters] to request characters api', logInfoStyles, response.data.results.length);
+      console.log('%c[Success][requestCharacters] to request characters api', logInfoStyles, 'total: ',  response.data.results.total);
       return response.data.results;
     });
   } catch(error) {
@@ -81,6 +82,7 @@ const requestCharacters = async () => {
   }
 }
 
+
 const renderCharacter = (character) => (
   `<div class="card flex_1 flex_direction_row" id="${character.id}">
         <div class="card_image">
@@ -91,7 +93,36 @@ const renderCharacter = (character) => (
         </div>
         <div class="card_title">
             ${character.name}
-        </div>        
+        </div>
+        <div class="card_footer">
+          <div class="card_footer_actions">
+            <a 
+              class="button button_primary" 
+              title="Compartilhar"
+              href="whatsapp://send?text="https://app-marvel-js.netlify.app/characters.html""
+              target="_blanck"                    
+            >
+              Share
+              <br /> 
+              <span class="material-icons">share</span>                    
+            </a>
+             ${character.urls.map((urlItem) => `                
+                  <a 
+                    class="button button_primary" 
+                    title="${urlItem.type}"
+                    href="${urlItem.url}"
+                    target="_blanck"                    
+                  >
+                    ${urlItem.type}
+                    <br /> 
+                    <span class="material-icons">link</span>                    
+                  </a>
+                  `
+                )
+              }
+          </div>
+        </div>
+    </div>       
     </div>`
 );
 

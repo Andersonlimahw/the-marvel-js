@@ -38,7 +38,7 @@
 
 .card_footer {
     margin: 8px 0;
-    padding: 16px;
+    padding: 24px 16px 0 16px;
     border-top: 2px solid #eee;
 }
 
@@ -49,6 +49,8 @@
 .card_footer_actions .button {
     flex: 1;
     align-items: stretch;
+    font-size: 0.9rem;
+    text-decoration: none;
 }
 
 @media (max-width: 480px) {
