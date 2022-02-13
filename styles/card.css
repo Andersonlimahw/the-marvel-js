@@ -47,8 +47,8 @@
 
 .card_footer_actions {
     text-align: left;
-    display: flex;
-    height: 64px;
+    display: flex;    
+    height: auto;
 }
 .card_footer_actions .button {
     flex: 1;
