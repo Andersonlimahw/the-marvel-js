@@ -1,0 +1,29 @@
+.icon_button {
+  text-decoration: none;  
+  color: var(--body-color);
+  padding: var(--md-size);
+  font-size: 1rem;
+}
+
+.icon_button .icon_button_primmary {
+  color: var(--first-color-light); 
+  background: var(--body-color);
+  border-color: var(--body-color);
+}
+
+.icon_button .icon_button_primmary ::hover {
+  color: var(--body-color); 
+  background: var(--first-color-light);
+}
+
+.icon_button .icon_button_secondary {  
+  color: var(--first-color); 
+  background: var(--first-color-light);
+  border-color: var(--first-color-light);
+}
+
+.icon_button .icon_button_secondary ::hover {  
+  color: var(--first-color-light); 
+  background: var(--first-color);
+  border-color: var(--first-color-light);
+}

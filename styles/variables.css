@@ -8,6 +8,12 @@
     --font-weigth-bold: bold;
     --font-weight-regular: 700;
     --font-weight-normal: 500;
+
+    --xs-size: 8px;
+    --sm-size: 16px;
+    --md-size: 32px;
+    --lg-size: 64px;
+    --xl-size: 128px;
   
     /*========== Font and typography ==========*/
     --normal-font-size: 1rem;

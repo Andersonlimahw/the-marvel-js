@@ -14,6 +14,9 @@
 .card_title {
     font-size: 2.5rem;
     padding: 16px 16px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
 }
 
 .card_image {
@@ -38,13 +41,14 @@
 
 .card_footer {
     margin: 8px 0;
-    padding: 24px 16px 0 16px;
+    padding: 16px 8px 0 8px;
     border-top: 2px solid #eee;
 }
 
 .card_footer_actions {
     text-align: left;
     display: flex;
+    height: 64px;
 }
 .card_footer_actions .button {
     flex: 1;
@@ -53,9 +57,24 @@
     text-decoration: none;
 }
 
+@media (max-width: 1024px) {
+    .card {
+        min-width: 80%;
+        margin: 32px 16px;
+    }
+
+    .card_footer_actions {
+        height: auto;
+    }
+}
+
 @media (max-width: 480px) {
     .card {
         min-width: 90%;
         margin: 16px 8px;
+    }
+
+    .card_footer_actions {
+        height: auto;
     }
 }

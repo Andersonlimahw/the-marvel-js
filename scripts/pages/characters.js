@@ -91,24 +91,14 @@ const renderCharacter = (character) => (
               alt="${character.name}"
             />
         </div>
-        <div class="card_title">
+        <div class="card_title" title="${character.name}">
             ${character.name}
         </div>
         <div class="card_footer">
-          <div class="card_footer_actions">
-            <a 
-              class="button button_primary" 
-              title="Compartilhar"
-              href="whatsapp://send?text="https://app-marvel-js.netlify.app/characters.html""
-              target="_blanck"                    
-            >
-              Share
-              <br /> 
-              <span class="material-icons">share</span>                    
-            </a>
+          <div class="card_footer_actions">            
              ${character.urls.map((urlItem) => `                
                   <a 
-                    class="button button_primary" 
+                    class="icon_button icon_button_primary" 
                     title="${urlItem.type}"
                     href="${urlItem.url}"
                     target="_blanck"                    
