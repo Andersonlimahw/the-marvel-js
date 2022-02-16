@@ -47,7 +47,8 @@
     cursor: pointer;
 }
 
-.menu .menu_item .menu_item_icon--active {
-    font-weight: bold;
+.menu .menu_item.menu_item_icon--active {
+    border-right: 2px solid var(--first-color);
+    border-radius: 50%;
     color: var(--first-color);
 }
