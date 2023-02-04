@@ -7,6 +7,8 @@ import {
   logErrorStyles,
 } from '../utils/logStyles.js';
 
+import mockCharacters from '../mocks/characters.js'
+
 
 // Variabels:
 const defaultLimit = '100';
@@ -125,6 +127,9 @@ const render = async () => {
         console.log('%c[Success] response', logSuccessStyles, response);
         characters =  response;
         return response;
+      }).catch(() => {
+        characters = mockCharacters.data.results;
+        console.info('%c[Warn] Using mock with values of mockCharacters', logInfoStyles, mockCharacters);
       });    
     let _result = characters.map((character) => {      
       return renderCharacter(character);
